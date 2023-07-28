@@ -24,13 +24,25 @@
 
     <title>Fruit Burst</title>
 
+    <style>
+        .overlay::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 12px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 
 <body>
     <header class="container mx-auto py-4 px-4  md:px-11 lg:px-16;">
         <nav>
             <div class="navbar  lg:bg-[#F85559] rounded-full">
-                <div class="navbar-start gap-9">
+                <div class="navbar-start gap-9 flex-1 justify-between">
                     <div class="dropdown">
                         <label tabindex="0" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -47,12 +59,12 @@
                             <li><a>All Fruits</a></li>
                         </ul>
                     </div>
-                    <div class="flex justify-center items-center gap-2 pl-3">
+                    <div class=" flex justify-between order-2 items-center gap-2 pl-3 ">
                         <img src="images/logo.png" alt="">
                         <h3 class="text-xl font-bold text-black lg:text-white lg:text-4xl ">Fruit Burst</h3>
                     </div>
                 </div>
-                <div class="navbar-center navber-start lg:order-first hidden lg:flex lg:navbar-center ">
+                <div class="navbar-center lg:order-first hidden lg:flex  ">
                     <ul class="menu menu-horizontal px-1">
                         <li><a class="text-white font-medium text-base hover:text-white">Home</a></li>
                         <li><a class="text-white font-medium text-base hover:text-white">About Us</a></li>
@@ -69,38 +81,36 @@
             </div>
         </nav>
         <section class="pl-5 pr-5">
-
-            <div class="carousel w-full relative overflow-hidden	items-center pt-5 ">
-                <div id="slide1" class="carousel-item relative w-full ">
-                    <img src="images/banner1.png" class="w-full" />
+            <div class="carousel w-full relative overflow-hidden -z-0	items-center pt-5 ">
+                <div id="slide1" class="carousel-item relative  w-full ">
+                    <div class="overlay">
+                        <img src="images/banner1.png" class="w-full" />
+                    </div>
                     <div class="-opacity-60"></div>
                     <div
                         class="absolute flex items-center  justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide4" class="btn btn-circle">❮</a>
                         <div class=" text-center text-neutral-content">
                             <div class="max-w-md text-white">
-                                <h1 class=" text-5xl font-bold">Exotic tastes at your
-
-                                    doorstep</h1>
-                                <p class="">We supply highly quality organic products</p>
+                                <h1 class="text-[16px] lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                                <p class="text-[15px]">We supply highly quality organic products</p>
                                 <button class="btn bg-[#F85559] text-white font-bold">Get Started</button>
                             </div>
                         </div>
                         <a href="#slide2" class="btn btn-circle">❯</a>
-
                     </div>
                 </div>
                 <div id="slide2" class="carousel-item relative w-full ">
-                    <img src="images/banner2.png" class="w-full" />
+                    <div class="overlay">
+                        <img src="images/banner2.png" class="w-full" />
+                    </div>
                     <div
                         class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide1" class="btn btn-circle">❮</a>
                         <div class=" text-center text-neutral-content">
                             <div class="max-w-md text-white">
-                                <h1 class=" text-5xl font-bold">Exotic tastes at your
-
-                                    doorstep</h1>
-                                <p class="">We supply highly quality organic products</p>
+                                <h1 class="text-[16px] lg:text-5xl font-bold">Exotic tastes at your doorstep</h1>
+                                <p class="text-[15px]">We supply highly quality organic products</p>
                                 <button class="btn bg-[#F85559] text-white font-bold">Get Started</button>
                             </div>
                         </div>
@@ -108,16 +118,18 @@
                     </div>
                 </div>
                 <div id="slide3" class="carousel-item relative w-full">
-                    <img src="images/banner3.png" class="w-full" />
+                    <div class="overlay">
+                        <img src="images/banner3.png" class="w-full" />
+                    </div>
                     <div
                         class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" class="btn btn-circle">❮</a>
                         <div class=" text-center text-neutral-content">
                             <div class="max-w-md text-white">
-                                <h1 class=" text-5xl font-bold">Exotic tastes at your
+                                <h1 class="text-[16px] lg:text-5xl font-bold">Exotic tastes at your
 
                                     doorstep</h1>
-                                <p class="">We supply highly quality organic products</p>
+                                <p class="text-[15px]">We supply highly quality organic products</p>
                                 <button class="btn bg-[#F85559] text-white font-bold">Get Started</button>
                             </div>
                         </div>
@@ -125,15 +137,17 @@
                     </div>
                 </div>
                 <div id="slide4" class="carousel-item relative w-full ">
-                    <img src="images/banner4.png" class="w-full" />
+                    <div class="overlay">
+                        <img src="images/banner4.png" class="w-full" />
+                    </div>
                     <div
                         class="absolute flex items-center justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide3" class="btn btn-circle">❮</a>
                         <div class=" text-center text-neutral-content">
                             <div class="max-w-md text-white">
-                                <h1 class=" text-5xl font-bold">Exotic tastes at your
+                                <h1 class="text-[16] lg:text-5xl font-bold">Exotic tastes at your
                                     doorstep</h1>
-                                <p class="">We supply highly quality organic products</p>
+                                <p class="text-[15px]">We supply highly quality organic products</p>
                                 <button class="btn bg-[#F85559] text-white font-bold">Get Started</button>
                             </div>
                         </div>
@@ -143,9 +157,9 @@
 
 
                 <div
-                    class="absolute bottom-0  left-11 right-4 hidden rounded-sm 			 lg:block  bg-white drop-shadow-md ">
+                    class="absolute -bottom-5 z-10 left-11 right-4 hidden rounded-sm 			 lg:block  bg-white shadow-lg ">
 
-                    <div class="flex justify-center items-center    gap-10 bottom-12 top-[-30px]">
+                    <div class="flex justify-center -z-10 items-center gap-10 bottom-12 top-[-30px]">
                         <div>
                             <img src="images/fruit1.png" alt="">
                             <h1 class="text-center">Strawberry</h1>
@@ -173,7 +187,7 @@
         </section>
     </header>
     <main>
-        <section class="py-20">
+        <section class="lg:py-20 py-[1em] text-center">
             <div class="px-10">
                 <div class="flex flex-col lg:flex-row justify-between items-center px-5">
                     <div>
@@ -636,7 +650,7 @@ mask-half-2" />
                     </div>
 
                     <div>
-                         <h1 class="text-2xl font-bold"><i class="fa-solid fa-heart"></i> Fresh is Best</h1><br>
+                        <h1 class="text-2xl font-bold"><i class="fa-solid fa-heart"></i> Fresh is Best</h1><br>
                         <p>Professional employees are there for you to pick<br>
                             the most amazing and fresh fruits</p><br>
                     </div>
@@ -655,7 +669,8 @@ mask-half-2" />
 
                 <div class="text-1xl">
                     <div class="pt-3">
-                        <h1 class="text-2xl font-bold"><i class="fa-solid fa-apple-whole"></i> Integrated Supplier</h1><br>
+                        <h1 class="text-2xl font-bold"><i class="fa-solid fa-apple-whole"></i> Integrated Supplier</h1>
+                        <br>
                         <p>Professional employees are there for you to pick<br>
                             the most amazing and fresh fruits</p><br>
                     </div>
@@ -668,7 +683,8 @@ mask-half-2" />
                     </div>
 
                     <div class="pb-3">
-                        <h1 class="text-2xl font-bold"><i class="fa-regular fa-thumbs-up"></i> The Benefits Only</h1><br>
+                        <h1 class="text-2xl font-bold"><i class="fa-regular fa-thumbs-up"></i> The Benefits Only</h1>
+                        <br>
                         <p>Professional employees are there for you to pick<br>
                             the most amazing and fresh fruits</p><br>
                     </div>
